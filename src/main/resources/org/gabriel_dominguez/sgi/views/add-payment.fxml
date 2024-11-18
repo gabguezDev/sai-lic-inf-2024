@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER" hgap="10" vgap="10"
+          fx:controller="org.gabriel_dominguez.sgi.controllers.PaymentsController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Agregar un pago" style="-fx-font-size: 20px;" GridPane.rowIndex="0"/>
+
+    <Label text="Nombre del Inmueble:" GridPane.rowIndex="1"/>
+    <TextField fx:id="nombreTextField" GridPane.rowIndex="1" GridPane.columnIndex="1"
+               promptText="Ej. Apartamento en el centro"/>
+
+    <Label text="Dirección:" GridPane.rowIndex="2"/>
+    <TextField fx:id="direccionTextField" GridPane.rowIndex="2" GridPane.columnIndex="1" promptText="Ej. Calle 123"/>
+
+    <Label text="Precio:" GridPane.rowIndex="3"/>
+    <TextField fx:id="precioTextField" GridPane.rowIndex="3" GridPane.columnIndex="1" promptText="Ej. 1000.00"/>
+
+    <Label text="Propietario:" GridPane.rowIndex="4"/>
+    <TextField fx:id="propietarioTextField" GridPane.rowIndex="4" GridPane.columnIndex="1"
+               promptText="Nombre del propietario"/>
+
+    <Label text="Descripción:" GridPane.rowIndex="5"/>
+    <TextArea fx:id="descripcionTextArea" GridPane.rowIndex="5" GridPane.columnIndex="1"
+              promptText="Detalles adicionales sobre el inmueble" wrapText="true">
+        <GridPane.vgrow>
+        </GridPane.vgrow>
+    </TextArea>
+
+    <HBox spacing="10" GridPane.rowIndex="6" GridPane.columnIndex="1" alignment="CENTER_RIGHT">
+        <Button text="Cancelar" fx:id="cancelarButton" onAction="#goToPaymentsSectionAction" style="-fx-background-color: red; -fx-text-fill: white;"/>
+        <Button text="Guardar" fx:id="guardarButton" style="-fx-background-color: green; -fx-text-fill: white;"/>
+    </HBox>
+</GridPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.FlowPane?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.TableRow?>
+<?import javafx.scene.control.TableCell?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.gabriel_dominguez.sgi.controllers.PaymentsController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <FlowPane hgap="10" >
+
+        <Button text="Atrás" style="-fx-font-size: 16px;" onAction="#goToHome"/>
+        <Label text="Pagos" style="-fx-font-size: 20px;"/>
+    </FlowPane>
+    <FlowPane alignment="CENTER" orientation="VERTICAL" hgap="10" vgap="10">
+        <Button text="Agregar nuevo pago" style="-fx-font-size: 16px;" onAction="#goToAddPayment"/>
+        <TableView layoutX="50.0" layoutY="50.0" prefHeight="300.0" prefWidth="500.0">
+            <columns>
+                <TableColumn text="Columna 1" prefWidth="100.0"/>
+                <TableColumn text="Columna 2" prefWidth="100.0"/>
+                <TableColumn text="Columna 3" prefWidth="100.0"/>
+                <TableColumn text="Columna 4" prefWidth="100.0"/>
+                <TableColumn text="Columna 5" prefWidth="100.0"/>
+            </columns>
+
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <TableRow>
+                        <TableCell>Fila 1, Col 1</TableCell>
+                        <TableCell>Fila 1, Col 2</TableCell>
+                        <TableCell>Fila 1, Col 3</TableCell>
+                        <TableCell>Fila 1, Col 4</TableCell>
+                        <TableCell>Fila 1, Col 5</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Fila 2, Col 1</TableCell>
+                        <TableCell>Fila 2, Col 2</TableCell>
+                        <TableCell>Fila 2, Col 3</TableCell>
+                        <TableCell>Fila 2, Col 4</TableCell>
+                        <TableCell>Fila 2, Col 5</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Fila 3, Col 1</TableCell>
+                        <TableCell>Fila 3, Col 2</TableCell>
+                        <TableCell>Fila 3, Col 3</TableCell>
+                        <TableCell>Fila 3, Col 4</TableCell>
+                        <TableCell>Fila 3, Col 5</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Fila 4, Col 1</TableCell>
+                        <TableCell>Fila 4, Col 2</TableCell>
+                        <TableCell>Fila 4, Col 3</TableCell>
+                        <TableCell>Fila 4, Col 4</TableCell>
+                        <TableCell>Fila 4, Col 5</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Fila 5, Col 1</TableCell>
+                        <TableCell>Fila 5, Col 2</TableCell>
+                        <TableCell>Fila 5, Col 3</TableCell>
+                        <TableCell>Fila 5, Col 4</TableCell>
+                        <TableCell>Fila 5, Col 5</TableCell>
+                    </TableRow>
+                </FXCollections>
+            </items>
+        </TableView>
+    </FlowPane>
+</VBox>
